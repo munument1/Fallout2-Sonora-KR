@@ -12,10 +12,10 @@ Fallout Sonora의 내부 기록, 대화문, UI 텍스트 등을 한국어로 번
 
 ## 1. FISSION-CE 버전
 
-1. Fallout 2 본편을 설치합니다.
+1. [Fallout 2 소노라](https://cambragol.github.io/Fallout-Sonora/)를 설치합니다.
 2. [FISSION-CE 한국어 버전](https://github.com/munument1/fission-ce-korean/releases/tag/FISSION-CE-Korean)을 다운로드합니다.
-3. 다운로드한 파일을 Fallout 2 본편 폴더에 덮어씁니다.
-4. 이 저장소의 한국어 번역 데이터를 Fallout 2 본편 폴더에 덮어씁니다.
+3. 다운로드한 파일을 Fallout 2 Sonora 폴더에 덮어씁니다.
+4. 이 저장소의 한국어 번역 데이터를 Fallout 2 Sonora 폴더에 덮어씁니다.
 5. `Fallout2.cfg` 파일을 열고 `[system]` 섹션에서 아래와 같이 수정합니다.
 
 ```ini
