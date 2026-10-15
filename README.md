@@ -1,22 +1,24 @@
 # 소노라 한국어 번역 — 공통 출력 엔진 방식
 
-기준: **기존 소노라 클래식 번역 / README 기준 1.16.4-sfall**. 이번 변경은 기존 번역의 출력 방식 전환이며 원본 모드 버전 업그레이드가 아니다.
+기준: **Sonora `eng_repack` 개발본 `de13b880ced4`**(2026-10-07). 공식 `1.16.4-sfall` 이후 변경을 고정한 개발 스냅샷이며 새로운 공식 릴리스가 아니다. 기존 번역을 유지하고 원문 변경 32개 중 신규 12개를 번역·기존 12개를 수정했으며, 의미가 같은 8개는 유지했다. 한국어 파일은 7개만 변경했다. [번역 이행 기록](docs/SONORA_DEV_TEXT_MIGRATION.json).
 
 한국어 번역 데이터는 이 저장소에서, 출력 모듈·글꼴·설치 도구는 [Fallout2 Korean Text Engine](https://github.com/munument1/Fallout2-Korean-Text-Engine)에서 관리한다. 한국어로 수정한 sfall `ddraw.dll`을 덮어쓰는 방식에서 공식 sfall과 별도 한국어 모듈을 사용하는 방식으로 전환한다.
 
 ## 현재 상태
 
-공식 sfall 4.5.1과 별도 한국어 출력 모듈로 기존 설치본의 선택 화면을 확인했다. 전체 UI·장시간 플레이 또는 미래 sfall 버전의 검증을 뜻하지 않는다. 소노라 피드백은 메뉴 배치·버튼 크기·굵기 확인이며, 대화 화면의 전체 범위는 열거되지 않았다.
+공식 sfall 4.5.1과 별도 한국어 출력 모듈을 사용한 개발본에서 사용자가 요청한 확인 화면 및 수정한 하단 글머리 기호·첫 한글·줄바꿈을 정상으로 확인하고 종료했다. 1024×768 창 모드에서 런타임 해시와 출력 경로도 검사했다. 전체 UI·퀘스트 분기·장시간 플레이·미래 sfall 버전 검증을 뜻하지 않는다.
 
-기존 릴리스와 태그는 보존한다. 새 방식은 이 PR의 구성과 GitHub Actions에서 생성한 `korean-classic-data` 산출물을 기준으로 확인한다. 새 방식의 정식 릴리스가 발행됐다고 표시하지 않는다.
+기존 릴리스와 태그는 보존한다. GitHub Actions의 `korean-classic-data`는 번역 패키지 산출물이며 정식 릴리스 발행과 구분한다.
 
 ## 설치
 
-1. 위 기준의 원본 모드를 별도 게임 복사본에 설치한다. 원본 모드의 스크립트·설정·DAT를 유지한다.
-2. 공식 sfall 4.5.1을 해당 모드에 준비한다. 기존 한국어 패치의 `ddraw.dll`·`LangFont.ini`를 새 번역 ZIP에서 복사하지 않는다.
-3. [공통 엔진 설치 안내](https://github.com/munument1/Fallout2-Korean-Text-Engine#설치)를 따른다. 프로필은 `sonora`이다.
-4. 이 저장소의 새 방식 번역 ZIP을 **실제 모드 실행 파일이 있는 폴더**에 적용한다. 에투라면 Fallout1in2 폴더다. 번역 ZIP에는 엔진 DLL·EXE·모드 스크립트·전체 CFG를 넣지 않는다.
-5. `Fallout2.cfg`에서 `[system] language=korean`을 사용한다. 다른 설정은 유지한다.
+1. 원본 [Sonora 1.16.4-sfall](https://github.com/NovaRain/Fallout-Sonora-English/releases/tag/1.16.4-sfall)을 준비한다.
+2. [개발본 준비 안내](docs/SONORA_DEVELOPMENT_KO.md)에 따라 `tools/prepare_development.py`로 새로운 독립 게임 폴더를 만든다. 원본 업데이트 48개와 재컴파일한 스크립트 640개를 적용하며 기존 설치본과 세이브를 덮어쓰지 않는다.
+3. [공통 엔진 설치 안내](https://github.com/munument1/Fallout2-Korean-Text-Engine#설치)에 따라 `--profile sonora-dev`와 비교용 원본 US 1.02d EXE `--base-exe`를 지정한다. 이전 `sonora` 프로필은 기존 전용 EXE 설치본용이다.
+4. 새 방식 번역 ZIP을 **`fallout2.exe`가 있는 폴더**에 푼다. ZIP에는 DLL·EXE·DAT·INT·전체 CFG를 넣지 않는다.
+5. `fallout2.cfg`에서 `[system] language=korean`을 사용하고 `fallout2.exe`로 실행한다.
+
+**번역 ZIP만으로 게임 스크립트가 개발본으로 업데이트되지는 않는다.** 런타임 준비 → 공통 엔진 → 번역 순서로 설치한다. 공식 sfall DLL은 수정하지 않는다. 외부 고해상도 DLL의 메시지창 기호 상수 두 바이트는 엔진 설치 도구에서 수정·백업한다.
 
 [모드별 설치와 메뉴 설정](docs/NEW_ENGINE_KO.md).
 
@@ -28,7 +30,7 @@
 python tools/build_translation.py --output dist/korean-classic-data.zip
 ```
 
-패키지에 포함한 파일 해시와 변환 목록은 `translation-manifest.json`에 들어간다. RPU의 mods 내 한국어 폴더는 배포 ZIP에서 data 아래에 합쳐 로드 순서 설정의 누락을 피한다. 게임 데이터의 언어를 중국어나 일본어로 바꾸지 않는다.
+패키지에 포함한 파일 해시·변환 목록·원본 커밋·개발본 여부는 `translation-manifest.json`에 들어간다. 게임 데이터의 언어를 중국어나 일본어로 바꾸지 않는다.
 
 ## CE/Fission
 

@@ -1,0 +1,267 @@
+{
+  "previous_baseline": "1.16.4-sfall",
+  "upstream_commit": "de13b880ced45ae4c77136927e04e5a80da2bbcf",
+  "upstream_branch": "eng_repack",
+  "development_build_not_new_release": true,
+  "reviewed_english_records": 32,
+  "actions": {
+    "updated": 12,
+    "retained_equivalent_translation": 8,
+    "added": 12
+  },
+  "changed_translation_files": [
+    "data/text/korean/dialog/BCCrvnQt.msg",
+    "data/text/korean/dialog/DCCrvBos.msg",
+    "data/text/korean/dialog/ICPaladn.msg",
+    "data/text/korean/dialog/MCBoss.msg",
+    "data/text/korean/dialog/NCApcBos.msg",
+    "data/text/korean/dialog/PCBdDed.msg",
+    "data/text/korean/dialog/YCMutCap.msg"
+  ],
+  "all_other_translation_files_byte_identical": true,
+  "unchanged_korean_records_and_audio_fields_preserved": true,
+  "reviewed": [
+    {
+      "file": "data/text/korean/dialog/BCCrvnQt.msg",
+      "id": 200,
+      "action": "updated",
+      "korean_before": "안녕하시오, 방랑자 양반. 난 상인 시드라고 하오. 우리 둘 다 이 구덩이에 갇힌 신세인 것 같구려, 안 그렇소?",
+      "korean_after": "안녕하시오, 방랑자 양반. 난 시드라고 하오. 우리 둘 다 이 구덩이에 갇힌 신세인 것 같구려, 안 그렇소?"
+    },
+    {
+      "file": "data/text/korean/dialog/BCCrvnQt.msg",
+      "id": 1200,
+      "action": "updated",
+      "korean_before": "안녕하시오, 아가씨. 난 상인 시드라고 하오. 우리 둘 다 이 구덩이에 갇힌 신세인 것 같구려, 안 그렇소?",
+      "korean_after": "안녕하시오, 아가씨. 난 시드라고 하오. 우리 둘 다 이 구덩이에 갇힌 신세인 것 같구려, 안 그렇소?"
+    },
+    {
+      "file": "data/text/korean/dialog/DCCrvBos.msg",
+      "id": 100,
+      "action": "updated",
+      "korean_before": "상인을 보았습니다.",
+      "korean_after": "상단원 라미레스를 보았습니다."
+    },
+    {
+      "file": "data/text/korean/dialog/DCMer.msg",
+      "id": 212,
+      "action": "retained_equivalent_translation",
+      "korean_before": "성스러운 불꽃의 뜻에 따라, 내 질문에 답하라.",
+      "korean_after": "성스러운 불꽃의 뜻에 따라, 내 질문에 답하라."
+    },
+    {
+      "file": "data/text/korean/dialog/FCSlvScn.msg",
+      "id": 224,
+      "action": "retained_equivalent_translation",
+      "korean_before": "미쳤어! 만약 간수장에게 걸리면, 우린 교수형보다 더 끔찍한 일을 당할 거야. 우리 둘이 같이 있는 걸 들키기 전에 어서 나가는 게 좋아. 난 문제에 휘말리기 싫다고.",
+      "korean_after": "미쳤어! 만약 간수장에게 걸리면, 우린 교수형보다 더 끔찍한 일을 당할 거야. 우리 둘이 같이 있는 걸 들키기 전에 어서 나가는 게 좋아. 난 문제에 휘말리기 싫다고."
+    },
+    {
+      "file": "data/text/korean/dialog/ICPaladn.msg",
+      "id": 223,
+      "action": "updated",
+      "korean_before": "그렇군. 애리조나의 브라더후드 상황이 좋지 않다고 들었네. 안타까운 일이군. 나머지 팀원들은 어디 있나?",
+      "korean_after": "그렇군. 소노라의 브라더후드 상황이 좋지 않다고 들었네. 안타까운 일이군. 나머지 팀원들은 어디 있나?"
+    },
+    {
+      "file": "data/text/korean/dialog/MCBoss.msg",
+      "id": 224,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "내 물건을 돌려줘."
+    },
+    {
+      "file": "data/text/korean/dialog/MCBoss.msg",
+      "id": 225,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "일을 끝내면 돌려주지."
+    },
+    {
+      "file": "data/text/korean/dialog/MCBoss.msg",
+      "id": 226,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "좋아."
+    },
+    {
+      "file": "data/text/korean/dialog/MCBoss.msg",
+      "id": 227,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "(부하들에게 빼앗은 물건을 돌려주라고 신호한다.)"
+    },
+    {
+      "file": "data/text/korean/dialog/MCBoss.msg",
+      "id": 228,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "고마워."
+    },
+    {
+      "file": "data/text/korean/dialog/MCBoss.msg",
+      "id": 229,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "황무지에서 죽으면 당신한테도 쓸모없을 텐데. 내 물건이 필요해."
+    },
+    {
+      "file": "data/text/korean/dialog/MCBoss.msg",
+      "id": 253,
+      "action": "retained_equivalent_translation",
+      "korean_before": "엿이나 먹어라.",
+      "korean_after": "엿이나 먹어라."
+    },
+    {
+      "file": "data/text/korean/dialog/MCBoss.msg",
+      "id": 254,
+      "action": "updated",
+      "korean_before": "",
+      "korean_after": "그럼 힘으로 내 물건을 되찾아야겠군!"
+    },
+    {
+      "file": "data/text/korean/dialog/NCApcBos.msg",
+      "id": 256,
+      "action": "updated",
+      "korean_before": " 병뚜껑이 들고, 열흘간의 엄격한 관리가 필요합니다. 비싸긴 하지만, 그 대가로 추가적인 체력을 얻게 될 겁니다.",
+      "korean_after": " 병뚜껑이 들고, 일주일간 절대 안정이 필요합니다. 비싸긴 하지만, 그 대가로 추가적인 체력을 얻게 될 겁니다."
+    },
+    {
+      "file": "data/text/korean/dialog/NCApcBos.msg",
+      "id": 264,
+      "action": "updated",
+      "korean_before": "가능합니다. 하지만 효과는 덜 뚜렷할 겁니다. 이번에는 비슷한 결과를 얻기 위해 더 많은 시간과 노력을 들여야 할 겁니다.",
+      "korean_after": "물론 가능합니다."
+    },
+    {
+      "file": "data/text/korean/dialog/NCApcBos.msg",
+      "id": 267,
+      "action": "updated",
+      "korean_before": " 병뚜껑이며, 2주가 소요될 겁니다.",
+      "korean_after": " 병뚜껑이며, 일주일이 소요될 겁니다."
+    },
+    {
+      "file": "data/text/korean/dialog/PCAtmTlk.msg",
+      "id": 275,
+      "action": "retained_equivalent_translation",
+      "korean_before": "참 근시안적인 동기로군. 제발. 잊지 마라, 난 백 살이야. 우리가 구세계에 있었다면, 난 기업의 사다리를 타고 올라가고 있었겠지. 하지만 지금 우리에게 남은 게 뭐지? 폐허, 기반 시설도, 서비스도, 도로도, 수돗물도 없지... 사람들은 우리와 성화 교회 덕분에 가로등 불빛을 다시 볼 수 있게 된 거다.",
+      "korean_after": "참 근시안적인 동기로군. 제발. 잊지 마라, 난 백 살이야. 우리가 구세계에 있었다면, 난 기업의 사다리를 타고 올라가고 있었겠지. 하지만 지금 우리에게 남은 게 뭐지? 폐허, 기반 시설도, 서비스도, 도로도, 수돗물도 없지... 사람들은 우리와 성화 교회 덕분에 가로등 불빛을 다시 볼 수 있게 된 거다."
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdBos.msg",
+      "id": 313,
+      "action": "retained_equivalent_translation",
+      "korean_before": "(미간을 찌푸리며, 얼굴에 경련이 인다) 그래서, 또 다른 추종자의 앞잡이인가? 수도사들에게는 이미 다 말했어. 우릴 내버려 둬.",
+      "korean_after": "(미간을 찌푸리며, 얼굴에 경련이 인다) 그래서, 또 다른 추종자의 앞잡이인가? 수도사들에게는 이미 다 말했어. 우릴 내버려 둬."
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 240,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "똥 마려워."
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 241,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "아, 그렇군. 여기는 공-용-주-택이고, 난 밥이야. 난 스-캐-빈-저이자 잡-역-부라고. 알아들었어? 흠. 버논을 찾아가 봐. 여기 일을 맡고 있거든."
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 242,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "알았어."
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 243,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "응!"
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 268,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "그 폐허에는 아직 쓸 만한 게 남아 있어요. 여기서는 무슨 일을 하시나요?"
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 269,
+      "action": "added",
+      "korean_before": null,
+      "korean_after": "그래요, 그 '광산'은 완전히 바닥났어요. 폐허에 아무것도 남아 있지 않죠. 여기서는 무슨 일을 하시나요?"
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 236,
+      "action": "updated",
+      "korean_before": "흠.",
+      "korean_after": "알겠어요."
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 257,
+      "action": "retained_equivalent_translation",
+      "korean_before": "개러지 시티에 가본 적이 있는데, 거기도 스캐빈저들이 살고 있었어요.",
+      "korean_after": "개러지 시티에 가본 적이 있는데, 거기도 스캐빈저들이 살고 있었어요."
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 258,
+      "action": "updated",
+      "korean_before": "아, 늙은 코건은 이제 완전히 미쳐버렸겠지, 안 그래? 카르텔의 새로운 지부에 대해 소란이 일었을 때 많은 스캐빈저들이 돈을 벌러 거기로 갔어. 난 그렇게 긴 여행을 떠나기가 겁났거든. 하지만 이제 가봤자 아무 소용없어. 거기의 폐허는 이미 바닥났고, 카르텔도 해체됐다고 하더군.",
+      "korean_after": "아, 늙은 코건은 이제 완전히 미쳐버렸겠지, 안 그래? 새로운 지부에 대해 소란이 일었을 때 많은 사람들이 한몫 잡으러 거기로 갔어. 난 그렇게 긴 여행을 떠나기가 겁났거든. 하지만 이제 가봤자 아무 소용없어. 거기의 폐허는 이미 바닥났다던데?"
+    },
+    {
+      "file": "data/text/korean/dialog/PCBdDed.msg",
+      "id": 259,
+      "action": "updated",
+      "korean_before": "그래서 무슨 일을 하시나요?",
+      "korean_after": "요즘 거기서 무슨 일이 벌어지는지는 모르겠네요. 그래서 무슨 일을 하시나요?"
+    },
+    {
+      "file": "data/text/korean/dialog/PCRedBos.msg",
+      "id": 217,
+      "action": "retained_equivalent_translation",
+      "korean_before": "솔직히, 실수로 여기까지 오게 됐어. 그냥 가게 해줘, 제발.",
+      "korean_after": "솔직히, 실수로 여기까지 오게 됐어. 그냥 가게 해줘, 제발."
+    },
+    {
+      "file": "data/text/korean/dialog/RCFrmBnd.msg",
+      "id": 317,
+      "action": "retained_equivalent_translation",
+      "korean_before": "레인저와 그들의 정의에 대한 이야기들 말이지. 전부 거짓과 과장뿐이야. 그들의 지원을 받고 싶다면 가진 걸 전부 내놔야 해. 그러면 아마도, 아주 가끔은 그들이 도와줄지도 모르지.",
+      "korean_after": "레인저와 그들의 정의에 대한 이야기들 말이지. 전부 거짓과 과장뿐이야. 그들의 지원을 받고 싶다면 가진 걸 전부 내놔야 해. 그러면 아마도, 아주 가끔은 그들이 도와줄지도 모르지."
+    },
+    {
+      "file": "data/text/korean/dialog/YCMutCap.msg",
+      "id": 210,
+      "action": "updated",
+      "korean_before": "그래, 나중에 보자.",
+      "korean_after": "나중에 보자."
+    }
+  ],
+  "file_hashes_before": {
+    "data/text/korean/dialog/BCCrvnQt.msg": "aced7fd2e818103d2e987ea1028bc17d4211848e3edb8c2933460151d7c717ab",
+    "data/text/korean/dialog/DCCrvBos.msg": "8e00d077d3788fb0e5eeabc0a84e1805922bbda37d1da8b26d15e168c4166124",
+    "data/text/korean/dialog/ICPaladn.msg": "e3bbd0b54ea36ec35f1b9d8da3b96efb6c9a8932f246f12395df92eb6a49bf98",
+    "data/text/korean/dialog/MCBoss.msg": "8ec27f1d8fec03e43a8738702f5a02d7f1984e5c3a2757b5aed062efd0e56a80",
+    "data/text/korean/dialog/NCApcBos.msg": "07a89f0ebe18b2ba5ee706a16fd04e71fd7ef419292f0875791958a6d3d5d754",
+    "data/text/korean/dialog/PCBdDed.msg": "f39878b83ec678ab8c3a32d4578eff69e07cb38ed1f6321e6354211fdce18900",
+    "data/text/korean/dialog/YCMutCap.msg": "efdb511c88b2898d217bc3724d19cfcecd93701a784c4c28ab3ed4cb8db43f2d"
+  },
+  "file_hashes_after": {
+    "data/text/korean/dialog/BCCrvnQt.msg": "b3794227369510f605dbe3ce004d4dc3e2c8833b572a7af782bff27b6b1269c9",
+    "data/text/korean/dialog/DCCrvBos.msg": "5c3d69cec959aea77bceb2c1adcec636c8693c02fafc10dd8840a8eb05bd5287",
+    "data/text/korean/dialog/ICPaladn.msg": "ee7f93cf5db9cd1f2b3c84e85552864ab217f03896ac881b4f74aa66fc1962a1",
+    "data/text/korean/dialog/MCBoss.msg": "bcf1f726d84623a5d87acd07029e2d75b60c10da3f2d462cc120e1019d04c0a7",
+    "data/text/korean/dialog/NCApcBos.msg": "611f97e0c1a0dc3624755bd7962900832f79593f9968d3bc024daa6b0d1513e6",
+    "data/text/korean/dialog/PCBdDed.msg": "fa64238e3070c953b0868269644d11e7be343c6a254ac9015e698d8bb5caa28e",
+    "data/text/korean/dialog/YCMutCap.msg": "72cfffa940748cab895f48d2335006d05c0e03cc7c344ede762e94b36c2b46cb"
+  }
+}

@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "mod": "소노라",
-  "baseline": "기존 소노라 클래식 번역 / README 기준 1.16.4-sfall",
+  "baseline": "Sonora eng_repack development de13b880ced4",
   "engine_repository": "https://github.com/munument1/Fallout2-Korean-Text-Engine",
-  "engine_profile": "sonora",
-  "engine_validation": "selected screens checked with official sfall 4.5.1",
+  "engine_profile": "sonora-dev",
+  "engine_validation": "user-confirmed requested selected screens, monitor bullet, Korean and wrapping normal at 1024x768; official sfall 4.5.1 unchanged",
   "sources": [
     {
       "from": "data",
@@ -20,5 +20,9 @@
     "data/premade/combat.bio",
     "data/premade/diplomat.bio",
     "data/premade/stealth.bio"
-  ]
+  ],
+  "previous_baseline": "1.16.4-sfall",
+  "upstream_mod_upgraded": true,
+  "upstream_commit": "de13b880ced45ae4c77136927e04e5a80da2bbcf",
+  "development_build": true
 }
