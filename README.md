@@ -38,6 +38,13 @@ language=Korean
 ```
 
 
+## NovaRain / sfall 업데이트 참고 (2026-10-15 확인)
+
+- [NovaRain 영어판 원본의 2026-10-07 커밋](https://github.com/NovaRain/Fallout-Sonora-English/commit/de13b880ced45ae4c77136927e04e5a80da2bbcf)에서 **sfall 4.5.1**로 갱신되었습니다. 변경 대상은 `ddraw.dll`, `ddraw.ini`, `sfall-mods.ini` 및 설명 문서입니다.
+- 위 커밋에서 **한국어 대사·번역 문자열의 변경은 확인되지 않았습니다.** 다만 기존 한국어 호환판 `ddraw.dll`의 최신 sfall 환경 대응 여부는 별도 검증이 필요합니다.
+- sfall 원본 DLL과 한국어 호환 DLL을 무작정 교차 덮어쓰지 마십시오. 검증 전에는 작동하는 기존 조합을 백업해 두고, 최신 sfall 호환성은 별도 설치 폴더에서 확인하는 편이 안전합니다.
+- 기존 NovaRain 릴리즈 [1.16.4-sfall](https://github.com/NovaRain/Fallout-Sonora-English/releases/tag/1.16.4-sfall)은 한국어판 README가 지정한 설치 기준입니다. 최신 소스 커밋이 곧 새 설치용 정식 릴리즈를 뜻하는 것은 아닙니다.
+
 ## 주의사항
 
 * 이 자료는 한국어 번역 데이터입니다.
