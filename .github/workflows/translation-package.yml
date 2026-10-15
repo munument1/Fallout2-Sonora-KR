@@ -1,0 +1,21 @@
+name: Translation-only classic package
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/build_translation.py --output dist/korean-classic-data.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: korean-classic-data
+          path: dist/korean-classic-data.zip
+          if-no-files-found: error

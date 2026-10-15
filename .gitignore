@@ -1,0 +1,5 @@
+
+# Generated translation packages
+dist/
+__pycache__/
+*.pyc
