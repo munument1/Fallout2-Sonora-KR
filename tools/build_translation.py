@@ -72,13 +72,17 @@ def build(root, output):
     for name in expected:
         if name.casefold() not in names:
             raise ValueError(f'Required translation file missing: {name}')
-    for name in ['README.md', 'docs/NEW_ENGINE_KO.md']:
+    guides = {'README.md': 'README_KO.md', 'docs/NEW_ENGINE_KO.md': 'INSTALL_KO.md',
+              'docs/SONORA_DEVELOPMENT_KO.md': 'DEVELOPMENT_KO.md'}
+    for name, destination in guides.items():
         path = root / name
         if path.is_file():
-            payload['INSTALL_KO.md' if name.startswith('docs/') else 'README_KO.md'] = path.read_bytes()
+            payload[destination] = path.read_bytes()
     info = {'mod': config['mod'], 'baseline': config['baseline'], 'runtime': 'classic-cp949',
+            'previous_baseline': config.get('previous_baseline'),
+            'upstream_commit': config.get('upstream_commit'), 'development_build': config.get('development_build', False),
             'engine_repository': config['engine_repository'], 'engine_profile': config.get('engine_profile'),
-            'engine_validation': config['engine_validation'], 'upstream_mod_upgraded': False,
+            'engine_validation': config['engine_validation'], 'upstream_mod_upgraded': config.get('upstream_mod_upgraded', False),
             'utf8_files_converted_in_artifact_only': converted,
             'files': {name: hashlib.sha256(data).hexdigest() for name, data in sorted(payload.items())}}
     payload['translation-manifest.json'] = json.dumps(info, ensure_ascii=False, indent=2).encode('utf-8')
@@ -90,7 +94,7 @@ def build(root, output):
             entry.external_attr = 0o644 << 16
             archive.writestr(entry, data)
     return {'artifact': str(output), 'files': len(payload), 'utf8_converted': len(converted),
-            'engine_binaries_included': False, 'upstream_mod_upgraded': False}
+            'engine_binaries_included': False, 'upstream_mod_upgraded': config.get('upstream_mod_upgraded', False)}
 
 
 def main():
