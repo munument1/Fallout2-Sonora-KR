@@ -1,30 +1,12 @@
-# 소노라 새 출력 엔진 설치 참고
+# Sonora 1.16.4-sfall / 1.16+DLC 공유 텍스트 — 독립형 베타 2
 
-공식 sfall 4.5.1과 별도 한국어 출력 모듈로 기존 설치본의 선택 화면을 확인했다. 전체 UI·장시간 플레이 또는 미래 sfall 버전의 검증을 뜻하지 않는다. 소노라 피드백은 메뉴 배치·버튼 크기·굵기 확인이며, 대화 화면의 전체 범위는 열거되지 않았다.
+본 자료는 기존 Sonora 클래식 번역의 별도 패키지이며, main의 eng_repack 개발 번역과 호환 범위가 다릅니다. FSonoraDLC.exe 시험본에서는 640x480 메인 메뉴 한글 표시 및 짧은 기동까지 확인했습니다.
 
-## 모드와 엔진을 별도 관리
+설치:
+1. 클래식/DLC 게임 실행 폴더에 이 번역 ZIP을 먼저 풉니다. EXE·DLL·DAT/INT·스크립트는 포함하지 않습니다.
+2. 공식 엔진 v1.2.0-beta.2의 설치기를 실행하고 게임 폴더만 지정하세요. 실행 파일의 Watcom ABI/PE 구조를 검사하며 게임 종류 선택 및 중국어 파일은 불필요합니다.
+3. 원래 사용하던 모드 런처와 sfall을 보존하세요. sfall이 없는 구성에도 무조건 최신 DLL을 추가하지 않습니다.
+4. fallout2.cfg [system] language=korean을 확인하고 게임을 실행해 한글 대화와 퀘스트 진행을 검수합니다.
+5. 번역 ZIP에는 게임 전체 백업이 필요하지 않으나 엔진 패처의 EXE 수정 파일 원본은 정확한 복구를 위해 한 벌 보관됩니다.
 
-기준 모드: 기존 소노라 클래식 번역 / README 기준 1.16.4-sfall. 엔진: [공통 출력 모듈](https://github.com/munument1/Fallout2-Korean-Text-Engine). 실행 프로필: `sonora`.
-
-공식 sfall의 DLL은 수정하지 않는다. 공통 엔진은 사용자가 별도로 제공한 CJK EXE·글꼴 DLL에서 런타임을 구성하며, 모드 전용 EXE 변경과 리소스를 보존한다. 지원 EXE 해시는 공통 엔진의 runtime-manifest.json에 한정한다. 검증한 모드와 다른 EXE를 강제로 허용하지 않는다.
-
-번역 적용은 설치본의 language=korean에 맞춰 data/text/korean을 사용한다. 배경 이야기는 data/premade의 .bio 파일을 포함한다. 원본 모드의 CFG 전체·ddraw.ini 전체·sfall.dat·스크립트를 번역 ZIP으로 덮어쓰지 않는다.
-
-## 메뉴 표시 설정
-
-공식 CJK 경로의 메뉴 버튼·글자 배율에 맞춘 확인된 설정이다.
-
-```ini
-[MAINMENU]
-MAIN_MENU_SIZE=0
-USE_HIRES_IMAGES=0
-SCALE_BUTTONS_AND_TEXT_MENU=0
-```
-
-이 항목은 f2_res.ini에 들어간다. 해상도 자체는 별도로 유지한다. 기존 메뉴 그림을 원래 크기로 표시해 배경만 확대되는 배치 어긋남을 피한다.
-
-글꼴은 TEXT=Galmuri9 / Size 10 / Weight 400, BUTTON=Galmuri11 / Size 14 / Weight 600을 사용한다. SoftGreen=1, SoftTextColors=1은 차분한 글자색 설정이다.
-
-이전 배포물을 되돌리려면 보존된 기존 릴리스를 사용한다. 공통 엔진 설치 도구로 변경한 파일은 해당 도구의 --restore로 복구하며, 사용자가 변경한 파일을 자동 덮어쓰지 않는다.
-
-클래식 ZIP은 게임에서 읽는 번역 텍스트를 대상으로 하며 SVE 원문 백업 파일과 다른 언어의 Appearance 텍스트는 포함하지 않는다. 해당 원본 파일은 저장소에서 보존한다.
+1.16+DLC에 추가된 내용은 원래 1.16.4 기반 번역에 빠져 있을 수 있습니다. eng_repack 개발본 번역과 함께 덮어쓰지 마세요. 모든 대사/저장/로드의 완전한 호환성은 보장하지 않습니다.
