@@ -81,7 +81,7 @@ def build(root, output):
     info = {'mod': config['mod'], 'baseline': config['baseline'], 'runtime': 'classic-cp949',
             'previous_baseline': config.get('previous_baseline'),
             'upstream_commit': config.get('upstream_commit'), 'development_build': config.get('development_build', False),
-            'engine_repository': config['engine_repository'], 'engine_profile': config.get('engine_profile'),
+            'engine_repository': config['engine_repository'], 'engine_mode': config['engine_mode'], 'engine_minimum_release': config['engine_minimum_release'], 'requires_cjk_binaries': False,
             'engine_validation': config['engine_validation'], 'upstream_mod_upgraded': config.get('upstream_mod_upgraded', False),
             'utf8_files_converted_in_artifact_only': converted,
             'files': {name: hashlib.sha256(data).hexdigest() for name, data in sorted(payload.items())}}
