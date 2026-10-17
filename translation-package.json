@@ -3,7 +3,6 @@
   "mod": "소노라",
   "baseline": "Sonora eng_repack development de13b880ced4",
   "engine_repository": "https://github.com/munument1/Fallout2-Korean-Text-Engine",
-  "engine_profile": "sonora-dev",
   "engine_validation": "user-confirmed requested selected screens, monitor bullet, Korean and wrapping normal at 1024x768; official sfall 4.5.1 unchanged",
   "sources": [
     {
@@ -24,5 +23,8 @@
   "previous_baseline": "1.16.4-sfall",
   "upstream_mod_upgraded": true,
   "upstream_commit": "de13b880ced45ae4c77136927e04e5a80da2bbcf",
-  "development_build": true
+  "development_build": true,
+  "engine_mode": "native-structural",
+  "engine_minimum_release": "v1.2.0-beta.1",
+  "requires_cjk_binaries": false
 }
