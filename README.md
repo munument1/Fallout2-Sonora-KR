@@ -4,6 +4,14 @@
 
 한국어 번역 데이터는 이 저장소에서, 출력 모듈·글꼴·설치 도구는 [Fallout2 Korean Text Engine](https://github.com/munument1/Fallout2-Korean-Text-Engine)에서 관리한다. 한국어로 수정한 sfall `ddraw.dll`을 덮어쓰는 방식에서 공식 sfall과 별도 한국어 모듈을 사용하는 방식으로 전환한다.
 
+## Sonora 클래식 1.16.4 및 DLC 설치본
+
+**이 기본 브랜치는 eng_repack 개발본 전용입니다.** 원본 1.16.4-sfall 기반 번역을 사용하는
+FSonoraDLC.exe 설치본에는 [클래식/DLC 공유 텍스트 베타 2 별도 릴리스](https://github.com/munument1/Fallout2-Sonora-KR/releases/tag/v1.16.4-native-beta.2)를 사용하세요.
+사용자 보유 1.16+DLC 시험본에서 640×480 한국어 메인 메뉴 출력과 짧은 기동을 확인했습니다.
+DLC 추가 퀘스트·대사가 모두 번역된 것은 아니며, 개발판 번역과 클래식판 번역을 함께 덮어쓰면 안 됩니다.
+한국어 번역 ZIP을 먼저 설치한 후 [독립형 엔진 v1.2.0-beta.2](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.2)를 사용하세요.
+
 ## 새로운 독립형 출력 엔진 (v1.2.0-beta.1)
 
 기존 번역문의 MSG ID와 본문은 그대로 유지합니다. 이제 게임별 프로필, 중국어 수정 EXE, 중국어 글꼴 DLL을 요구하지 않습니다. [v1.2.0-beta.1 공개 베타 설치기](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.1)는 선택한 게임 폴더 안의 호환 Fallout 2 실행 파일을 내부 구조로 자동 인식합니다. 핵심 ABI 자체가 변경된 파일은 무리하게 패치하지 않습니다.
