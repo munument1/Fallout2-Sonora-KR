@@ -25,6 +25,6 @@
   "upstream_commit": "de13b880ced45ae4c77136927e04e5a80da2bbcf",
   "development_build": true,
   "engine_mode": "native-structural",
-  "engine_minimum_release": "v1.2.0-beta.1",
+  "engine_minimum_release": "v1.2.1",
   "requires_cjk_binaries": false
 }
