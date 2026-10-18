@@ -81,6 +81,9 @@ def build(root, output):
             'engine_validation': config['engine_validation'], 'upstream_mod_upgraded': False,
             'utf8_files_converted_in_artifact_only': converted,
             'files': {name: hashlib.sha256(data).hexdigest() for name, data in sorted(payload.items())}}
+    for field in ('variant', 'upstream_release', 'engine_release'):
+        if field in config:
+            info[field] = config[field]
     payload['translation-manifest.json'] = json.dumps(info, ensure_ascii=False, indent=2).encode('utf-8')
     output.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:

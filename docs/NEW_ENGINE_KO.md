@@ -1,12 +1,34 @@
-# Sonora 1.16.4-sfall / 1.16+DLC 공유 텍스트 — 독립형 베타 2
+# Fallout Sonora — NovaRain 한국어 번역
 
-본 자료는 기존 Sonora 클래식 번역의 별도 패키지이며, main의 eng_repack 개발 번역과 호환 범위가 다릅니다. FSonoraDLC.exe 시험본에서는 640x480 메인 메뉴 한글 표시 및 짧은 기동까지 확인했습니다.
+[NovaRain의 Sonora 1.16.4-sfall](https://github.com/NovaRain/Fallout-Sonora-English/releases/tag/1.16.4-sfall)용 한국어 번역 데이터입니다.
 
-설치:
-1. 클래식/DLC 게임 실행 폴더에 이 번역 ZIP을 먼저 풉니다. EXE·DLL·DAT/INT·스크립트는 포함하지 않습니다.
-2. 공식 엔진 v1.2.0-beta.2의 설치기를 실행하고 게임 폴더만 지정하세요. 실행 파일의 Watcom ABI/PE 구조를 검사하며 게임 종류 선택 및 중국어 파일은 불필요합니다.
-3. 원래 사용하던 모드 런처와 sfall을 보존하세요. sfall이 없는 구성에도 무조건 최신 DLL을 추가하지 않습니다.
-4. fallout2.cfg [system] language=korean을 확인하고 게임을 실행해 한글 대화와 퀘스트 진행을 검수합니다.
-5. 번역 ZIP에는 게임 전체 백업이 필요하지 않으나 엔진 패처의 EXE 수정 파일 원본은 정확한 복구를 위해 한 벌 보관됩니다.
+**[번역 ZIP 다운로드](https://github.com/munument1/Fallout2-Sonora-KR/releases/download/v1.16.4-novarain-kr1.1/Sonora-NovaRain-1.16.4-Korean-Data.zip)** · [한국어 출력 엔진](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/latest)
 
-1.16+DLC에 추가된 내용은 원래 1.16.4 기반 번역에 빠져 있을 수 있습니다. eng_repack 개발본 번역과 함께 덮어쓰지 마세요. 모든 대사/저장/로드의 완전한 호환성은 보장하지 않습니다.
+## 설치 방법
+
+1. NovaRain의 Sonora 1.16.4-sfall을 설치합니다.
+2. 게임을 종료하고 `Sonora-NovaRain-1.16.4-Korean-Data.zip`을 실제 Sonora 게임 폴더에 풀어 적용합니다.
+3. 한국어 출력 엔진 설치기를 실행하고 같은 게임 폴더에 설치합니다.
+4. 기존 Sonora 실행기나 런처로 실행합니다.
+
+번역 데이터 적용 후 엔진을 설치하면 한국어 언어 설정까지 자동으로 처리합니다. 기존 게임 폴더를 사용할 수 있으며 시험용 복사본 준비는 선택 사항입니다.
+
+## 버전 구분
+
+이 자료는 NovaRain 1.16.4-sfall 기준입니다. `eng_repack` 개발본 번역은 [별도 릴리즈](https://github.com/munument1/Fallout2-Sonora-KR/releases/tag/v2026.10.17-native-beta.1)를 사용하세요.
+
+기존 1.16+DLC 시험본에서는 공유 메인 메뉴의 한국어 표시를 확인했습니다. DLC 추가 지역·퀘스트·대사 전체의 번역과 장시간 플레이 검증은 별도로 필요합니다.
+
+## Fission-CE
+
+Fission-CE용 자료는 [기존 릴리즈](https://github.com/munument1/Fallout2-Sonora-KR/releases/tag/Korean)와 기존 설치 방법을 그대로 사용합니다. 이번 NovaRain용 설치 방법은 클래식 sfall 실행 파일을 대상으로 합니다.
+
+## 번역 및 출처
+
+기존 클래식 번역 데이터를 유지하고 패키지 이름과 설치 안내를 갱신했습니다.
+
+- 원본: Fallout Sonora 개발진
+- 영어판: NovaRain / Fallout Sonora English 제작진
+- 한국어 번역 및 호환 작업: munument1 및 기존 번역 기여자
+
+[번역 문제 제보](https://github.com/munument1/Fallout2-Sonora-KR/issues)

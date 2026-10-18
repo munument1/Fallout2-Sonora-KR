@@ -1,26 +1,34 @@
-# Fallout Sonora 1.16.4-sfall 한국어 텍스트 — 독립형 엔진 별도 릴리스
+# Fallout Sonora — NovaRain 한국어 번역
 
-이 브랜치는 기존 클래식 1.16.4-sfall 번역 데이터를 보존한 독립형 엔진 베타 2 전용 배포입니다. 현재 main 브랜치의 eng_repack 개발본 번역과 **기준이 다릅니다.** 두 자료를 서로 섞지 마세요.
+[NovaRain의 Sonora 1.16.4-sfall](https://github.com/NovaRain/Fallout-Sonora-English/releases/tag/1.16.4-sfall)용 한국어 번역 데이터입니다.
 
-## 게임과 텍스트 엔진
+**[번역 ZIP 다운로드](https://github.com/munument1/Fallout2-Sonora-KR/releases/download/v1.16.4-novarain-kr1.1/Sonora-NovaRain-1.16.4-Korean-Data.zip)** · [한국어 출력 엔진](https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/latest)
 
-- 번역 데이터 기준: 이전 Sonora 1.16.4-sfall 한국어 패치. 실제 DLC 관련 대사 전체가 포함된 번역임을 보장하지 않습니다.
-- 검사 결과: 소유한 FSonoraDLC.exe 1.16+DLC 시험 복사본에서 메뉴가 실제 한국어로 출력됐고 14초 기동을 확인했습니다.
-- 출력 엔진: https://github.com/munument1/Fallout2-Korean-Text-Engine/releases/tag/v1.2.0-beta.2
-- EXE, 중국어 DLL, sfall DLL, 원본 DAT/스크립트는 번역 ZIP에 포함되지 않습니다.
+## 설치 방법
 
-## 설치 순서
+1. NovaRain의 Sonora 1.16.4-sfall을 설치합니다.
+2. 게임을 종료하고 `Sonora-NovaRain-1.16.4-Korean-Data.zip`을 실제 Sonora 게임 폴더에 풀어 적용합니다.
+3. 한국어 출력 엔진 설치기를 실행하고 같은 게임 폴더에 설치합니다.
+4. 기존 Sonora 실행기나 런처로 실행합니다.
 
-1. 원본 Sonora 설치본을 보존하고 올바른 DLC/클래식 구성인지 확인합니다.
-2. 이 릴리스의 클래식 한국어 번역 ZIP을 게임 EXE가 있는 폴더에 먼저 풉니다. data/text/korean의 번역이 우선 준비되어야 합니다.
-3. 위 베타 2의 Fallout2-Korean-Native-Setup.exe를 실행해 게임 폴더만 지정합니다. 게임 종류, 프로필, 중국어 파일은 필요하지 않습니다.
-4. 기존 실행 파일 및 sfall 구성을 유지하고 fallout2.cfg의 [system] language=korean을 확인합니다.
-5. 게임 메인 메뉴·대화·퀘스트·저장/불러오기를 직접 확인합니다. DLC 신규 내용까지 모두 번역됐다고 주장하지 않습니다.
+번역 데이터 적용 후 엔진을 설치하면 한국어 언어 설정까지 자동으로 처리합니다. 기존 게임 폴더를 사용할 수 있으며 시험용 복사본 준비는 선택 사항입니다.
 
-현재 main 개발본의 신규/수정 대사 7개는 이 클래식 기준 번역에 소급 적용하지 않았습니다. 버전이 다른 스크립트·DAT를 복사하지 마세요.
+## 버전 구분
 
-## 자료/빌드
+이 자료는 NovaRain 1.16.4-sfall 기준입니다. `eng_repack` 개발본 번역은 [별도 릴리즈](https://github.com/munument1/Fallout2-Sonora-KR/releases/tag/v2026.10.17-native-beta.1)를 사용하세요.
 
-python tools/build_translation.py --output dist/sonora-1164-native-data.zip
+기존 1.16+DLC 시험본에서는 공유 메인 메뉴의 한국어 표시를 확인했습니다. DLC 추가 지역·퀘스트·대사 전체의 번역과 장시간 플레이 검증은 별도로 필요합니다.
 
-원래 한국어 MSG 내용을 수정하지 않고 기존 문자 인코딩(CP949)을 그대로 보존합니다. 원본 자료와 역대 릴리스는 보존됩니다.
+## Fission-CE
+
+Fission-CE용 자료는 [기존 릴리즈](https://github.com/munument1/Fallout2-Sonora-KR/releases/tag/Korean)와 기존 설치 방법을 그대로 사용합니다. 이번 NovaRain용 설치 방법은 클래식 sfall 실행 파일을 대상으로 합니다.
+
+## 번역 및 출처
+
+기존 클래식 번역 데이터를 유지하고 패키지 이름과 설치 안내를 갱신했습니다.
+
+- 원본: Fallout Sonora 개발진
+- 영어판: NovaRain / Fallout Sonora English 제작진
+- 한국어 번역 및 호환 작업: munument1 및 기존 번역 기여자
+
+[번역 문제 제보](https://github.com/munument1/Fallout2-Sonora-KR/issues)
