@@ -1,0 +1,39 @@
+name: One-time completed-branch cleanup (Fallout2-Sonora-KR)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cleanup-completed-branches-once.yml'
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    if: github.repository == 'munument1/Fallout2-Sonora-KR'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const targets=[{"name":"codex/native-korean-engine-20261017","sha":"02bcc5f867539b91c1fb119e403429baa5e2eb31","pr":3},{"name":"codex/shared-korean-engine","sha":"d912b56e77b76fb2d643995d09957651c46b9f65","pr":1},{"name":"codex/sonora-classic-native-beta2-index","sha":"c4db6313b93f600d98881dbcf6958a20d4809bca","pr":4},{"name":"codex/sonora-dev-korean","sha":"d38edeebdabb1b78f7fb734023fe37eb19b4cca0","pr":2}];
+            const owner=context.repo.owner,repo=context.repo.repo;
+            if(owner!=='munument1'||repo!=="Fallout2-Sonora-KR"||context.ref!=="refs/heads/main")throw Error('Wrong repository or branch');
+            const open=await github.paginate(github.rest.pulls.list,{owner,repo,state:'open',per_page:100});
+            const blocked=new Set(open.flatMap(p=>[p.head.ref,p.base.ref]));
+            let deleted=0;const skipped=[];
+            for(const c of targets){
+             if(c.name==="main"||c.name==='gh-pages'||blocked.has(c.name)){skipped.push(c.name+': policy/PR');continue;}
+             let b;try{b=(await github.rest.repos.getBranch({owner,repo,branch:c.name})).data}catch(e){skipped.push(c.name+': missing');continue;}
+             if(b.protected||b.commit.sha!==c.sha){skipped.push(c.name+': changed/protected');continue;}
+             if(c.pr!==null){
+              const p=(await github.rest.pulls.get({owner,repo,pull_number:c.pr})).data;
+              if(!p.merged_at||p.base.ref!=="main"||p.head.ref!==c.name||p.head.sha!==c.sha){skipped.push(c.name+': PR changed');continue;}
+             }else{
+              const cmp=(await github.rest.repos.compareCommitsWithBasehead({owner,repo,basehead:"main..."+c.name})).data;
+              if(cmp.ahead_by!==0){skipped.push(c.name+': unique commits');continue;}
+             }
+             await github.rest.git.deleteRef({owner,repo,ref:'heads/'+c.name});
+             deleted++;core.info('DELETED '+c.name);
+            }
+            for(const s of skipped)core.warning('SKIPPED '+s);
+            core.info('Completed '+deleted+' deletions of '+targets.length+' candidates; '+skipped.length+' skipped');
+            await core.summary.addHeading('Completed branch cleanup').addRaw('Deleted '+deleted+' of '+targets.length+'; skipped '+skipped.length+'.').write();
